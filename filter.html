@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="uft-8">
+	<title>Filter</title>
+	<link rel="stylesheet" href="filter.css">
+</head>
+
+<body>
+	<section>
+	<ul>
+		<li class="list active" data-filter="all">All</li>
+		<li class="list" data-filter="glutenfree">filter1</li>
+		<li class="list" data-filter="soybased">filter2</li>
+		<li class="list" data-filter="nonuts">filter3</li>
+		<li class="list" data-filter="noeggs">filter4</li>
+		<li class="list" data-filter="vegan">filter5<li>
+	</ul>
+	<div class="product">
+		<div class="itemBox all"><img src="Cake.jpg"></div>
+		<div class="itemBox glutenfree"><img src="cakeroll.jpg"></div>
+		<div class="itemBox soybased"><img src="blueberrycake.jpg"></div>
+		<div class="itemBox nonuts"><img src="greencake.jpg"></div>
+		<div class="itemBox noeggs"><img src="rosecake.jpg"></div>
+		<div class="itemBox vegan"><img src="strawberrycake.jpg"></div>
+		<div class="itemBox all"><img src="tartbox.jpg"></div>
+		<div class="itemBox glutenfree"><img src="chococroissant.jpg"></div>
+		<div class="itemBox soybased"><img src="croissantsandwhich.jpg"></div>
+		<div class="itemBox nonuts"><img src="berrycheesecake.jpg"></div>
+		<div class="itemBox noeggs"><img src="croissant.jpg"></div>
+		<div class="itemBox vegan"><img src="chococherry.png"></div>
+	</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.list').click(function(){
+			const value = $(this).attr('data-filter');
+			if (value == 'all'){
+				$('.itemBox').show('1000');
+			}
+			else{
+				$('.itemBox').not('.'+value).hide('1000');
+				$('.itemBox').filter('.'+value).show('1000');
+			}
+		})
+		// add active class on selective item
+		
+		$('.list').click(function(){
+			$(this).addClass('active').siblings().removeClass('active')	;
+		})
+	})
+  </script>
+</body>
+</html>

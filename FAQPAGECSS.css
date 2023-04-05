@@ -1,0 +1,100 @@
+body{
+    font-family: 'Work Sans', sans-serif;
+	
+}
+	.hidecontent {
+    	display: none;
+	}
+	
+	#myaccordion label {
+		display: block;    
+		cursor: pointer;
+		transition: ease .5s;
+		color: #444;
+    		cursor: pointer;
+    		padding: 30px 20px;
+    		width: auto%;
+    		border: 1px solid #d4d4d4;
+    		outline: none;
+		background: #fff;
+}
+	}
+	#myaccordion label:hover {
+		background: #777;
+	}
+	.content {
+		background: #eee;
+		padding: 30px 20px;
+		border: 1px solid #d4d4d4;
+		border-bottom: #777;
+		width: auto%;
+
+  
+	}
+	#myaccordion input:checked + label + .content {
+		display: block;
+		webkit-animation: fadeIn 0.5s ease-out;
+		-moz-animation: fadeIn 0.5s ease-out;
+		-o-animation: fadeIn 0.5s ease-out;
+		animation: fadeIn 0.5s ease-out;
+	}
+	@-webkit-keyframes fadeIn {
+		0% {
+			display: none;
+			opacity: 0;
+		}
+		1% {
+			display: block;
+			opacity: 0;
+		}
+		100% {
+			display: block;
+			opacity: 1;
+		}
+	}
+body{
+    font-family: 'Work Sans', sans-serif;
+ 	 background-image: url('cookies.png');
+}
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+  width: auto%;
+
+
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+
+}
+.faq-body{
+
+    /* text-align: center; */
+   width: 100%; 
+   padding: auto;
+   
+}
+
+div
+{
+    border: none;
+    padding: 20px 20px;
+    margin: 50px 200px ;
+	background-color: #fff;
+}
