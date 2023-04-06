@@ -138,12 +138,22 @@ myModal.addEventListener('shown.bs.modal', () => {
           </p>
 		</div>
       </section>
-
+<div style="margin: auto;">
+<section class="section1">
+	<ul>
+		<li class="list active" data-filter="all">All</li>
+		<li class="list" data-filter="glutenfree">Gluten-Free</li>
+		<li class="list" data-filter="soybased">Soybased</li>
+		<li class="list" data-filter="nonuts">Nut-free</li>
+		<li class="list" data-filter="noeggs">Egg-Free</li>
+		<li class="list" data-filter="vegan">Vegan<li>
+	</ul>
+</section></div>
       <div class="album py-5 bg-light">
         <div class="container">
 
  <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 itemBox glutenfree">
               <div class="card mb-4 box-shadow">
                 <img src="Iced Milk.png" alt="Iced Chocolate Milk">
                 <div class="card-body">
@@ -161,7 +171,7 @@ myModal.addEventListener('shown.bs.modal', () => {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Item successfully added to cart!
+        Item added to cart successfully!
       </div>
       <div class="modal-footer">
         <button class="btn btn-custom" data-bs-target="#close" data-bs-toggle="modal">Close</button>
@@ -173,7 +183,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
             
 			
-			<div class="col-md-4">
+			<div class="col-md-4 itemBox all">
               <div class="card mb-4 box-shadow">
                 <img src="Hot Brewed Coffee.png" alt="Hot Brewed Coffee">
                 <div class="card-body">
@@ -190,7 +200,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
            
 
-		   <div class="col-md-4">
+		   <div class="col-md-4 itemBox noeggs">
               <div class="card mb-4 box-shadow">
                 <img src="Salted Caramel Cold Brew.png" alt="Salted Caramel Cold Brew">
                 <div class="card-body">
@@ -207,7 +217,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
 
 
-            <div class="col-md-4">
+            <div class="col-md-4 itemBox soybased">
               <div class="card mb-4 box-shadow">
                 <img src="Dark Caramel Nitro Cold Brew.png" alt="Dark Caramel Nitro Cold Brew">
                 <div class="card-body">
@@ -224,7 +234,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
            
 
-		   <div class="col-md-4">
+		   <div class="col-md-4 itemBox noeggs">
               <div class="card mb-4 box-shadow">
                 <img src="Iced Cappuccino.jpg" alt="Iced Cappuccino">
                 <div class="card-body">
@@ -241,7 +251,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
 			
 			
-			<div class="col-md-4">
+			<div class="col-md-4 itemBox vegan">
               <div class="card mb-4 box-shadow">
                 <img src="Coffee Frappuccino.jpg" alt="Coffee Frappuccino">
                 <div class="card-body">
@@ -258,7 +268,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
 			
 			
-			<div class="col-md-4">
+			<div class="col-md-4 itemBox nonuts">
               <div class="card mb-4 box-shadow">
                 <img src="Pistachio Frappuccino.png" alt="Pistachio Frappuccino">
                 <div class="card-body">
@@ -275,7 +285,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
 			
 			
-           <div class="col-md-4">
+           <div class="col-md-4 nonuts">
               <div class="card mb-4 box-shadow">
                 <img src="Double Chocolaty.png" alt="Double Chocolaty Chip Crème Frappuccino">
                 <div class="card-body">
@@ -292,7 +302,7 @@ myModal.addEventListener('shown.bs.modal', () => {
             </div>
 						
 			
-           <div class="col-md-4">
+           <div class="col-md-4 vegan">
               <div class="card mb-4 box-shadow">
                 <img src="Peppermint Mocha Frappuccino.png" alt="Peppermint Mocha Frappuccino">
                 <div class="card-body">
