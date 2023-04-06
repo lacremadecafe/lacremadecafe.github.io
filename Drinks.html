@@ -28,7 +28,13 @@ img {
     height: 100%; 
     object-fit: contain;
 }
-
+.modal-header {background-color: #98694f !important;}
+.modal-body{ background-color: #FFFBF1 !important;;}
+   .btn-custom{
+	background-color:#ca9e7b;
+	color: white;}
+	.btn-custom:hover{ background-color:#dfb78c;}
+	
 	.customize-body{ padding:15px;}
 	.relative{
 	position: relative;}
@@ -72,6 +78,14 @@ img {
   </head>
 
   <body>
+ <script>
+const myModal = document.getElementById('exampleModalToggle2')
+const myInput = document.getElementById('exampleModalToggle2')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+</script>
     
  <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
     <div class="container-fluid">
@@ -137,8 +151,21 @@ img {
 				  <p style="font-size:10px">Chocolate milk is a type of flavoured milk made by mixing cocoa solids with milk (either dairy or plant-based). It is a food pairing in which the milk's mouthfeel masks the dietary fibres of the cocoa solids.</p></style>
 				  <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-					<button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+					<button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
+					<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Item successfully added to cart!
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-custom" data-bs-target="#close" data-bs-toggle="modal">Close</button>
+      </div></div></div></div>
                     <small class="text-muted">300.00</small>
                   </div>
                 </div>
@@ -154,7 +181,7 @@ img {
 				  <p style="font-size:10px">Hot brew is coffee that's brewed using hot water. The difference in preparation techniques creates unique tastes, aromas, and chemical compositions.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱218.00</small>
                   </div>
@@ -171,7 +198,7 @@ img {
 				<p style="font-size:10px">Our Salted Caramel Cold Brew is flavored with salted caramel syrup, with a salted caramel flavored foam and drizzle of caramel syrup to finish the drink.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱499.00</small>
                   </div>
@@ -188,7 +215,7 @@ img {
 				<p style="font-size:10px">Nonfat milk Cold Foam elevates our Nitro Cold Brew with a touch of creaminess and flavor. The drink is finished with a strike of Turkish coffee ground.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱2,999.00</small>
                   </div>
@@ -205,7 +232,7 @@ img {
 				<p style="font-size:10px">Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱299.00</small>
                   </div>
@@ -222,7 +249,7 @@ img {
 				<p style="font-size:10px">Coffee meets milk and ice in a blender for a rumble and tumble and together they create one of our original Frappuccino beverages.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱270.00</small>
                   </div>
@@ -239,7 +266,7 @@ img {
 				<p style="font-size:10px">Sweet pistachio flavor blended with coffee, milk and ice, then finished with whipped cream and a salted brown-buttery topping—an icy-smooth, creamy delight to bring you into the new year.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱209.00</small>
                   </div>
@@ -256,7 +283,7 @@ img {
 				<p style="font-size:10px">Rich mocha-flavored sauce meets up with chocolaty chips, milk and ice for a blender bash. Top it off with sweetened whipped cream and mocha drizzle for a real party in your mouth.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱189.00</small>
                   </div>
@@ -273,7 +300,7 @@ img {
 				<p style="font-size:10px">A delectable blend of chocolaty-pepperminty perfection in every cool sip—Frappuccino® Roast coffee, mocha sauce, peppermint-flavored syrup, milk and ice, topped with whipped cream and dark-chocolate curls.</p></style>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
                     </div>
                     <small class="text-muted">₱189.00</small>
                   </div>
