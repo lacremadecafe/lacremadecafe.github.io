@@ -42,8 +42,7 @@ img {
    
   .modal-body{ background-color: #FFFBF1 !important;;}
    .btn-outline-primary:active,{ outline-color:#ca9e7b !important;}
-   .btn-outline-primary, .btn-primary:hover, .btn-primary:visited {
-    background-color: #363636 !important;
+   .btn-outline-primary, {background-color: #d0b59b !important;}
 	     .nav-scroller {
         position: relative;
         z-index: 2;
@@ -170,11 +169,11 @@ myModal.addEventListener('shown.bs.modal', () => {
 <section class="section1">
 	<ul>
 		<li class="list active" data-filter="all">All</li>
-		<li class="list" data-filter="glutenfree">filter1</li>
-		<li class="list" data-filter="soybased">filter2</li>
-		<li class="list" data-filter="nonuts">filter3</li>
-		<li class="list" data-filter="noeggs">filter4</li>
-		<li class="list" data-filter="vegan">filter5<li>
+		<li class="list" data-filter="glutenfree">Gluten-Free</li>
+		<li class="list" data-filter="soybased">Soybased</li>
+		<li class="list" data-filter="nonuts">Nut-Free</li>
+		<li class="list" data-filter="noeggs">Egg-Free</li>
+		<li class="list" data-filter="vegan">Vegan<li>
 	</ul>
 </section></div>
       <div class="album py-5 bg-light">
@@ -333,7 +332,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <button type="button" class="btn btn-success">Right</buttyon>
 </div>
 <div class="d-grid gap-2">
-	  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	<button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
 	  </div>
 		</div>
       </div>
