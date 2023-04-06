@@ -40,9 +40,12 @@ img {
 	}
    h3{ padding: 10px;}
    
-  .modal-body{ background-color: #FFFBF1 !important;;}
-   .btn-outline-primary:active,{ outline-color:#ca9e7b !important;}
-   .btn-outline-primary, {background-color: #d0b59b !important;}
+   .modal-body{ background-color: #FFFBF1 !important;;}
+   .btn-custom{
+	background-color:#ca9e7b;
+	color: white;}
+	.btn-custom:hover{ background-color:#dfb78c;}
+
 	     .nav-scroller {
         position: relative;
         z-index: 2;
@@ -111,8 +114,14 @@ const myInput = document.getElementById('redvelvet')
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
+	const myModal = document.getElementById('exampleModalToggle2')
+const myInput = document.getElementById('exampleModalToggle2')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
 </script>
-    
+
  <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">La Crema de Café</a>
@@ -122,9 +131,9 @@ myModal.addEventListener('shown.bs.modal', () => {
      <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Homepage.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
 			 <li class="nav-item">
-            <a class="nav-link" href="cakewfilter.html" >cakes</a>
+            <a class="nav-link" href="cakewfilter.html" >Cakes</a>
 			 <li class="nav-item">
 			  </li>
             <a class="nav-link" href="Drinks.html">Drinks</a>
@@ -160,7 +169,7 @@ myModal.addEventListener('shown.bs.modal', () => {
           <p class="lead text-muted"><i>"Life is too short to say no to cake"</p></i>
 		  
         <p>
-            <a href="#" class="btn btn-secondary my-2">Order Now</a>
+            <a href="#" class="btn btn-custom my-2">Order Now</a>
           </p>
 		</div>
       </section>
@@ -190,13 +199,13 @@ myModal.addEventListener('shown.bs.modal', () => {
 				  <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                        <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#coffeecaramel">
+<button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#coffeecaramel">
   Customize
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="coffeecaramel" tabindex="-1" aria-labelledby="coffeecaramelLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered vertical-align-center">
+  <div class="modal-dialog modal-lg modal-dialog-centered vertical-align-center">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -243,12 +252,12 @@ myModal.addEventListener('shown.bs.modal', () => {
   
  <h6>Quantity</h6>
 </div><div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-bottom:20px;">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-success">Right</buttyon>
+  <button type="button" class="btn btn-custom minus">-</button>
+  <button type="button" class="btn btn-light num">01</button>
+  <button type="button" class="btn btn-custom plus">+</buttyon>
 </div>
 <div class="d-grid gap-2">
-	  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
 	  </div>
 		</div>
       </div>
@@ -274,13 +283,13 @@ myModal.addEventListener('shown.bs.modal', () => {
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                        <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#carrot">
+<button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#carrot">
   Customize
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="carrot" tabindex="-1" aria-labelledby="carrotLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered vertical-align-center">
+  <div class="modal-dialog modal-lg modal-dialog-centered vertical-align-center">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -332,7 +341,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <button type="button" class="btn btn-success">Right</buttyon>
 </div>
 <div class="d-grid gap-2">
-	<button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
+	<button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
 	  </div>
 		</div>
       </div>
@@ -340,6 +349,22 @@ myModal.addEventListener('shown.bs.modal', () => {
       </div>
     </div>
 	</div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Item successfully added to cart!
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-custom" data-bs-target="#close" data-bs-toggle="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
                     </div>
@@ -358,13 +383,13 @@ myModal.addEventListener('shown.bs.modal', () => {
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                        <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#lightdouble">
+<button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#lightdouble">
   Customize
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="lightdouble" tabindex="-1" aria-labelledby="lightdoubleLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered vertical-align-center">
+  <div class="modal-dialog modal-lg modal-dialog-centered vertical-align-center">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -416,7 +441,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <button type="button" class="btn btn-suldcess">Right</buttyon>
 </div>
 <div class="d-grid gap-2">
-	  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
 	  </div>
 		</div>
       </div>
@@ -442,13 +467,13 @@ myModal.addEventListener('shown.bs.modal', () => {
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#torte">
+<button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#torte">
   Customize
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="torte" tabindex="-1" aria-labelledby="torteLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered vertical-align-center">
+  <div class="modal-dialog modal-lg modal-dialog-centered vertical-align-center">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -500,7 +525,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <button type="button" class="btn btn-suttess">Right</buttyon>
 </div>
 <div class="d-grid gap-2">
-	  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
 	  </div>
 		</div>
       </div>
@@ -527,13 +552,13 @@ myModal.addEventListener('shown.bs.modal', () => {
                     <div class="btn-group">
                     </div>
                      <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#chocovelvet">
+<button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#chocovelvet">
   Customize
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="chocovelvet" tabindex="-1" aria-labelledby="chocovelvetLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered vertical-align-center">
+  <div class="modal-dialog modal-lg modal-dialog-centered vertical-align-center">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -585,7 +610,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <button type="button" class="btn btn-success">Right</buttyon>
 </div>
 <div class="d-grid gap-2">
-	  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
 	  </div>
 		</div>
       </div>
@@ -611,13 +636,13 @@ myModal.addEventListener('shown.bs.modal', () => {
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                        <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#redvelvet">
+<button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#redvelvet">
   Customize
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="redvelvet" tabindex="-1" aria-labelledby="redvelvetLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered vertical-align-center">
+  <div class="modal-dialog modal-lg modal-dialog-centered vertical-align-center">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -669,7 +694,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   <button type="button" class="btn btn-survess">Right</buttyon>
 </div>
 <div class="d-grid gap-2">
-	  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
 	  </div>
 		</div>
       </div>
@@ -724,6 +749,29 @@ myModal.addEventListener('shown.bs.modal', () => {
 			$(this).addClass('active').siblings().removeClass('active')	;
 		})
 	})
+  </script>
+  <script>
+
+   const plus = document.querySelector(".plus"),
+    minus = document.querySelector(".minus"),
+    num = document.querySelector(".num");
+
+    let a = 1;
+
+    plus.addEventListener("click", ()=>{
+      a++;
+      a = (a < 10) ? "0" + a : a;
+      num.innerText = a;
+    });
+
+    minus.addEventListener("click", ()=>{
+      if(a > 1){
+        a--;
+        a = (a < 10) ? "0" + a : a;
+        num.innerText = a;
+      }
+    });
+
   </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
