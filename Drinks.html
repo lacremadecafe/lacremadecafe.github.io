@@ -125,9 +125,7 @@ img {
 		</div>
       </section>
 	  
-	
-	
-    <main role="main">
+	     <main role="main">
 
       <section class="jumbotron text-center">
         <div class="container">La Crema de Café</div>
@@ -139,6 +137,7 @@ img {
           </p>
 		</div>
       </section>
+	  
 
 
       <div class="album py-5 bg-light">
@@ -302,6 +301,47 @@ img {
 
     </main>
 
+	
+	
+	
+
+
+    <footer class="text-muted">
+      <div class="container">
+	  <p style="color:black">
+        <p class="float-right">
+          <a href="#">Back to top ↑</a>
+        </p>
+        <p><p style="color:black">All rights reserved &copy;  La Crema de Café</p></style>
+        <p><p style="color:black">New to La Crema de Café? <a href="../../">Visit the homepage</a></p></style>
+      </div>
+    </footer>
+	<!-- script for modal -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- script for filter -->
+<script src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.list').click(function(){
+			const value = $(this).attr('data-filter');
+			if (value == 'all'){
+				$('.itemBox').show('1000');
+			}
+			else{
+				$('.itemBox').not('.'+value).hide('1000');
+				$('.itemBox').filter('.'+value).show('1000');
+			}
+		})
+		// add active class on selective item
+		
+		$('.list').click(function(){
+			$(this).addClass('active').siblings().removeClass('active')	;
+		})
+	})
+  </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
