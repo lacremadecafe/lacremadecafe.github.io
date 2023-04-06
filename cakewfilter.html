@@ -40,12 +40,17 @@ img {
 	}
    h3{ padding: 10px;}
    
-   .modal-body{ background-color: #FFFBF1 !important;;}
+  .modal-body{ background-color: #FFFBF1 !important;;}
    .btn-custom{
 	background-color:#ca9e7b;
 	color: white;}
 	.btn-custom:hover{ background-color:#dfb78c;}
 
+   }
+.quantity{
+	position: relative;
+	width:50%; 
+	background-color: white;}
 	     .nav-scroller {
         position: relative;
         z-index: 2;
@@ -114,14 +119,14 @@ const myInput = document.getElementById('redvelvet')
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
-	const myModal = document.getElementById('exampleModalToggle2')
+const myModal = document.getElementById('exampleModalToggle2')
 const myInput = document.getElementById('exampleModalToggle2')
 
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
 </script>
-
+    
  <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">La Crema de Café</a>
@@ -139,13 +144,13 @@ myModal.addEventListener('shown.bs.modal', () => {
             <a class="nav-link" href="Drinks.html">Drinks</a>
 			 </li>
 			 <li class="nav-item">
-            <a class="nav-link" href="pastries2.html" >Pastries</a>
+            <a class="nav-link" href="Pastries.html" >Pastries</a>
          </li>
 		<li class="nav-item">
-            <a class="nav-link" href="about-us.html" >About Us</a>
+            <a class="nav-link" href="about-us.html" >about-us</a>
           </li>
 		  <li class="nav-item">
-            <a class="nav-link" href="TESTFAQ.html">FAQs</a>
+            <a class="nav-link" href="FAQ.html">FAQs</a>
           </li>
 		  <li class="nav-item">
             <a class="nav-link" href="Cart.html">Cart</a>
@@ -254,7 +259,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 </div><div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-bottom:20px;">
   <button type="button" class="btn btn-custom minus">-</button>
   <button type="button" class="btn btn-light num">01</button>
-  <button type="button" class="btn btn-custom plus">+</buttyon>
+  <button type="button" class="btn btn-custom plus">+</button>
 </div>
 <div class="d-grid gap-2">
 	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
@@ -336,9 +341,9 @@ myModal.addEventListener('shown.bs.modal', () => {
   
  <h6>Quantity</h6>
 </div><div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-bottom:20px;">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-success">Right</buttyon>
+  <button type="button" class="btn btn-custom minus">-</button>
+  <button type="button" class="btn btn-light num">01</button>
+  <button type="button" class="btn btn-success">Right</button>
 </div>
 <div class="d-grid gap-2">
 	<button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
@@ -436,9 +441,9 @@ myModal.addEventListener('shown.bs.modal', () => {
   
  <h6>Quantity</h6>
 </div><div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-bottom:20px;">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-suldcess">Right</buttyon>
+  <button type="button" class="btn btn-custom minus">-</button>
+  <button type="button" class="btn btn-light num">01</button>
+  <button type="button" class="btn btn-custom plus">+</button>
 </div>
 <div class="d-grid gap-2">
 	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
@@ -520,9 +525,9 @@ myModal.addEventListener('shown.bs.modal', () => {
   
  <h6>Quantity</h6>
 </div><div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-bottom:20px;">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-suttess">Right</buttyon>
+  <button type="button" class="btn btn-custom minus">-</button>
+  <button type="button" class="btn btn-light num">01</button>
+  <button type="button" class="btn btn-suttess">Right</button>
 </div>
 <div class="d-grid gap-2">
 	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
@@ -605,9 +610,9 @@ myModal.addEventListener('shown.bs.modal', () => {
   
  <h6>Quantity</h6>
 </div><div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-bottom:20px;">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-success">Right</buttyon>
+  <button type="button" class="btn btn-custom minus">-</button>
+  <button type="button" class="btn btn-light num">01</button>
+  <button type="button" class="btn btn-success">Right</button>
 </div>
 <div class="d-grid gap-2">
 	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
@@ -689,9 +694,9 @@ myModal.addEventListener('shown.bs.modal', () => {
   
  <h6>Quantity</h6>
 </div><div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-bottom:20px;">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-survess">Right</buttyon>
+  <button type="button" class="btn btn-custom minus">-</button>
+  <button type="button" class="btn btn-light num">01</button>
+  <button type="button" class="btn btn-success">Right</button>
 </div>
 <div class="d-grid gap-2">
 	  <button class="btn btn-custom" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Add to Cart</button>
